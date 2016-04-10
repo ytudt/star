@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>我的</title>
+</head>
+
+<body>
+  <canvas id="demo"></canvas>
+  <script src='js/stars2.js'></script>
+  <script>
+    var canvas = document.getElementById('demo');
+    canvas.width = 800;
+    canvas.height = 600;
+    canvas.style.border = "1px solid #000";
+    var ctx = canvas.getContext('2d');
+    var option = {
+      canvasWidth: 800,
+      canvasHeight: 600,
+      fillStyle: '#ccc',
+      bgPicPath: 'images/girl.jpg',
+      bgPicWidth: 600,
+      bgPicHeight: 300,
+      bgPicX: 100,
+      bgPicY: 150,
+      starPath: 'images/star.png',
+      starNum: 60,
+      ctx: ctx,
+      canvas: canvas
+    }
+    var stars = new Stars(option);
+    stars.init();
+  </script>
+</body>
+
+</html>
